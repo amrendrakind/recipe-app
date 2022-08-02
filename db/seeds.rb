@@ -23,8 +23,8 @@ recipe3 = Recipe.create(name: 'Recipe3', preparation_time: 50.5, cooking_time: 6
 recipe4 = Recipe.create(name: 'Recipe4', preparation_time: 70.5, cooking_time: 80.5, description: 'Description4', public: false, user: jorge)
 recipe5 = Recipe.create(name: 'Recipe5', preparation_time: 90.5, cooking_time: 100.5, description: 'Description5', public: true, user: pepe)
 
-recipefood1 = RecipeFood.create(quantity: 10, food: food1, receipt: recipe1)
-recipefood2 = RecipeFood.create(quantity: 20, food: food2, receipt: recipe2)
-recipefood3 = RecipeFood.create(quantity: 30, food: food3, receipt: recipe3)
-recipefood4 = RecipeFood.create(quantity: 40, food: food4, receipt: recipe4)
-recipefood5 = RecipeFood.create(quantity: 50, food: food5, receipt: recipe5)
+recipefood1 = RecipeFood.create(quantity: 10, food: food1, recipe: recipe1)
+recipefood2 = RecipeFood.create(quantity: 20, food: food2, recipe: recipe2)
+recipefood3 = RecipeFood.create(quantity: 30, food: food3, recipe: recipe3)
+recipefood4 = RecipeFood.create(quantity: 40, food: food4, recipe: recipe4)
+recipefood5 = RecipeFood.create(quantity: 50, food: food5, recipe: recipe5)
