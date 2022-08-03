@@ -4,7 +4,9 @@ class FoodsController < ApplicationController
     @user = User.find(params[:user_id])
   end
 
-  def new; end
+  def new
+      @food = Food.new
+  end
 
   def create
     food = Food.new(food_params)
