@@ -1,7 +1,7 @@
 class FoodsController < ApplicationController
   def index
-    @food = Food.all
-    @user = User.find(param[:user_id])
+    @foods = Food.all
+    @user = User.find(params[:user_id])
   end
 
   def new; end

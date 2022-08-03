@@ -5,9 +5,9 @@ Rails.application.routes.draw do
   # root "articles#index"
 
   root 'users#index'
-  resources :users, only: %i[index show] do
-    resources :foods, only: %i[new create destroy]
-    resources :recipes, only: %i[index show new create destroy]  do
+  resources :users do
+    resources :foods, except: %i[:edit]
+    resources :recipes, except: %i[:edit]  do
       resources :recipes_foods, only: %i[index show]
     end
   resources :shoppings, only:[:index]
