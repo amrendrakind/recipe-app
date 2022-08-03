@@ -1,13 +1,10 @@
 class FoodsController < ApplicationController
-
   def index
     @food = Food.all
     @user = User.find(param[:user_id])
   end
 
-  def new
-
-  end
+  def new; end
 
   def create
     food = Food.new(food_params)
@@ -18,14 +15,11 @@ class FoodsController < ApplicationController
     else
       redirect_to new_user_food_path
     end
-
   end
 
-  def destroy
-
-  end
+  def destroy; end
 
   def food_params
-    params.require(:food).permit(:name,:measurement_unit, :price, :quantity)
+    params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
   end
 end
