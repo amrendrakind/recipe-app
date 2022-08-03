@@ -1,9 +1,9 @@
 class RecipesController < ApplicationController
   def index
-    @receipts = Receipt.all
+    @recipe = Recipe.all
   end
 
   def show
-    @receipt = Receipt.find(params[:id])
+    @recipe = Recipe.find(params[:id])
   end
 end
