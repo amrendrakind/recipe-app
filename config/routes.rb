@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :foods, except: %i[:edit]
     resources :recipes, except: %i[:edit]  do
-      resources :recipes_foods, only: %i[index show]
+      resources :recipes_foods, only: %i[new create destroy]
     end
   resources :shoppings, only:[:index]
   resources :publics, only:[:index]
