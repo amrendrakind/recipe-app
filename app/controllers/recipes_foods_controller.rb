@@ -13,7 +13,6 @@ class RecipesFoodsController < ApplicationController
     else
       puts 'error'
     end
-
   end
 
   def destroy
