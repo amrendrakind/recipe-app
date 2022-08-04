@@ -1,2 +1,18 @@
-<h1>RecipesFoods#new</h1>
-<p>Find me in app/views/recipes_foods/new.html.erb</p>
+<h1>Add Food Ingredients</h1>
+
+    <label>Food</label>
+    <label>Measurement Unit</label>
+    <label>Unit Price</label>
+    <label>Quantity</<label>
+    <label>Actions</<label>
+
+  <% @foods.each do |food| %>
+    <%= form_with model: @recipe_food, url: user_recipe_recipes_foods_path do |f| %> 
+        <%= food.name %>
+        <%= food.measurement_unit %>
+        <%= food.price %>
+        <%= f.number_field :quantity %>
+        <%= f.hidden_field :food_id, value: food.id %>
+        <%= f.submit 'Add Items' %>
+    <% end %>
+  <% end %>

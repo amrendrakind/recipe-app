@@ -19,7 +19,10 @@ class FoodsController < ApplicationController
     end
   end
 
-  def destroy; end
+  def destroy
+    @food = Food.find(params[:id]).destroy
+    redirect_to user_foods_path(params[:user_id])
+  end
 
   def food_params
     params.require(:food).permit(:name, :measurement_unit, :price, :quantity)
