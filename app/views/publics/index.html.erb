@@ -1,3 +1,11 @@
-<h1>Public Recipe</h1>
-
-
+<h1>Public Recipes</h1>
+<ul>
+    <% @publics.each do |public|%>
+        <li>
+            <b><%= public.name%></b><br><br>
+            By: <%= public.user.name %><br><br>
+            Total Food Items : <%= public.recipe_foods.length %><br><br>
+            Total Price : $ <%= public.total_price %><br><br>
+        </li>
+    <%end%>
+<ul>
