@@ -14,10 +14,20 @@
  *= require_self
  */
 
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .loginForm {
+  margin-top: 50px;
   display: flex;
   flex-direction: column;
+  width: 500px;
+  border: 1px solid #2d2d2d;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  justify-content: space-between;
-  margin-top: 50px;
 }
