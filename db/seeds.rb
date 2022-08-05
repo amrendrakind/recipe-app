@@ -6,10 +6,11 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-isaac = User.create(name: 'Isaac')
-augusto = User.create(name: 'Augusto')
-jorge = User.create(name: 'Jorge')
-pepe = User.create(name: 'Pepe')
+isaac = User.create(name: 'Isaac', email: 'isaac@gmail.com', password: '123456')
+augusto = User.create(name: 'Augusto', email: 'augusto@gmail.com', password: '123456')
+jorge = User.create(name: 'Jorge', email: 'jorge@gmail.com', password: '123456')
+pepe = User.create(name: 'Pepe', email: 'pepe@gmail.com', password: '123456')
+amar = User.create(name: 'amar', email: 'amar@gmail.com', password: '123456')
 
 food1 = Food.create(name: 'Food1', measurement_unit: 'g', price: 10.5, quantity: 10, user: isaac)
 food2 = Food.create(name: 'Food2', measurement_unit: 'kg', price: 20.5, quantity: 20, user: isaac)
