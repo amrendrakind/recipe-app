@@ -28,9 +28,3 @@ recipefood2 = RecipeFood.create(quantity: 20, food: food2, recipe: recipe2)
 recipefood3 = RecipeFood.create(quantity: 30, food: food3, recipe: recipe3)
 recipefood4 = RecipeFood.create(quantity: 40, food: food4, recipe: recipe4)
 recipefood5 = RecipeFood.create(quantity: 50, food: food5, recipe: recipe5)
-
-require 'json'
-
-puts
-puts('All users :')
-puts(User.index.to_json)

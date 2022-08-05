@@ -1,0 +1,37 @@
+<h1>Recipes Descriptions</h1>
+
+<h2><%= @recipe.name %></h2>
+<label>preparation time</label> <%= @recipe.preparation_time %><br>
+<label>Public Recipe:<%= check_box_tag 'isPublic', 'no', @recipe.public %><br>
+<label>Cooking time </label><%= @recipe.cooking_time %>h<br>
+<label>Desctiptions</label> <%= @recipe.description %> <br><br>
+
+
+<%= link_to "Generate shopping list", user_recipe_shoppings_path(@recipe.user_id, @recipe.id)%> <br><br>
+
+<%= link_to 'Add Food Ingredients', new_user_recipe_recipes_food_path(@recipe.user_id, @recipe.id) %>
+
+<br>
+<br>
+
+<table>
+  <thead>
+    <tr>
+      <th>Quantity</th>
+      <th>Value $</th>
+      <th>ID</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @recipe_food.each do |rf| %>
+      <tr>
+        <td><%= rf.food.name %></td>
+        <td><%= rf.quantity %></td>
+        <td><%= rf.food.price %></td>
+        <td><%= rf.id %></td>
+        <td><%= button_to 'Delete', user_recipe_path(@recipe.user_id, @recipe.id), method: :delete %></td>
+      </tr>
+    <% end %>  
+  </tbody>
+</table>
