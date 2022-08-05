@@ -1,2 +1,4 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<% name = current_user.present? ? current_user.email : 'Guest!' %>
+<br>
+<h5>Welcome, <%= name %> </h5>
+
