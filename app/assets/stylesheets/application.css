@@ -93,3 +93,24 @@
 .desc {
   width: 70%;
 }
+
+.publics-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.details {
+  margin: 0;
+  font-size: 15px;
+}
+
+.public-label-details{
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: flex-start;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 2px;
+  justify-content: space-between;
+}
