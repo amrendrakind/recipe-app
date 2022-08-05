@@ -24,7 +24,7 @@
   margin-top: 50px;
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 600px;
   padding: 10px;
   border: 1px solid #2d2d2d;
   justify-content: center;
@@ -62,4 +62,34 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+}
+
+.recipes-list{
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.recipe {
+  width: 50%;
+}
+
+.remove-recipe-button {
+  border: 0;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.recipes-list > li {
+  display: flex;
+  padding: 10px 15px;
+  margin: 10px 0;
+  align-items: flex-start;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.desc {
+  width: 70%;
 }
