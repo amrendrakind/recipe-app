@@ -43,3 +43,23 @@
   text-align: end;
   margin-bottom: 10px;
 }
+
+.food-add-new-button {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.food-add-new-label{
+  width: 150px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.food-add-new-name-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
