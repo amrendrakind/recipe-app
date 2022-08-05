@@ -1,5 +1,5 @@
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="/">LogIn App</a>
+  <a class="navbar-brand" href="/">Recipes App</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -7,9 +7,11 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav ml-auto">
         <% if user_signed_in? %>
-            <li class="nav-item">
-                <%= link_to 'Sign Out', destroy_user_session_path, class: 'nav-link' %>
-            </li>
+            <li class="nav-item"><%= link_to "Foods", user_foods_path(current_user), {:class => "nav-link"} %> </li>
+            <li class="nav-item"><%= link_to "Recipes", user_recipes_path(current_user), {:class => "nav-link"} %> </li>
+            <li class="nav-item"><%= link_to "Public Recipes", user_publics_path(current_user), {:class => "nav-link"} %> </li>
+            <li class="nav-item"><%= link_to "Shopping List", user_recipe_shoppings_path(current_user,current_user.id), {:class => "nav-link"} %> </li>
+            <li class="nav-item"><%= link_to 'Sign Out', destroy_user_session_path, class: 'nav-link' %></li>
         <% else %>
             <li class="nav-item">
                 <%= link_to 'Sign In', new_user_session_path, class: 'nav-link' %>
