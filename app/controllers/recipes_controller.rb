@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @recipe_food = RecipeFood.where(recipe_id: params[:id])
+    @recipe_food = RecipeFood.includes(:food).where(recipe_id: params[:id])
   end
 
   def new
