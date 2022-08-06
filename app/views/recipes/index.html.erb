@@ -11,7 +11,9 @@
           <li>
               <div class="label">
                   <b><%= link_to recipe.name , user_recipe_path(@user, recipe) %></b>
-                  <%= button_to 'Remove', user_recipe_path(@user, recipe), method: :delete, class: 'remove-recipe-button'%>
+                  <% if can? :destroy, recipe  %>
+                    <%= button_to 'Remove', user_recipe_path(@user, recipe), method: :delete, class: 'remove-recipe-button'%>
+                  <% end %>
               </div>
               <div class="desc">
                   <p><%= recipe.description %></p>
