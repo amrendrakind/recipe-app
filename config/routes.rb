@@ -14,7 +14,6 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
 
-
   resources :users do
     resources :foods, except: %i[:edit]
     resources :recipes, except: %i[:edit]  do
@@ -26,5 +25,6 @@ Rails.application.routes.draw do
   end
   devise_scope :user do
     get '/users/:user_id/recipes/:recipe_id/recipes_foods/:id' => 'recipes_foods#destroy'
+    get '/users/:user_id/recipes/:recipe_id/recipes_foods/new' => 'recipes_foods#new'
   end
 end
