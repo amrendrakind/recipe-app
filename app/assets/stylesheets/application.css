@@ -160,3 +160,10 @@
 .recipe-table-details {
   width: 100%;
 }
+
+.add-food-th {
+  text-align: center;
+  width: 100%;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 10px;
+}
