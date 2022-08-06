@@ -1,18 +1,30 @@
-<h1>Add Food Ingredients</h1>
-
-    <label>Food</label>
-    <label>Measurement Unit</label>
-    <label>Unit Price</label>
-    <label>Quantity</<label>
-    <label>Actions</<label>
-
-  <% @foods.each do |food| %>
-    <%= form_with model: @recipe_food, url: user_recipe_recipes_foods_path do |f| %> 
-        <%= food.name %>
-        <%= food.measurement_unit %>
-        <%= food.price %>
-        <%= f.number_field :quantity %>
-        <%= f.hidden_field :food_id, value: food.id %>
-        <%= f.submit 'Add Items' %>
-    <% end %>
-  <% end %>
+<div class='container' >
+  <div class='loginForm'>
+    <h1>Add Food Ingredients</h1>
+    <table class="add-food-th">
+      <thead>
+        <tr>
+          <th>Food</th>
+          <th>Measurement Unit</th>
+          <th>Unit Price</th>
+          <th>Quantity</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+              <% @foods.each do |food| %>
+                <tr>
+                  <%= form_with model: @recipe_food, url: user_recipe_recipes_foods_path do |f| %> 
+                  <td>  <%= food.name %></td>
+                  <td> <%= food.measurement_unit %></td>
+                  <td> <%= food.price %></td>
+                  <td>  <%= f.number_field :quantity %></td>
+                    <%= f.hidden_field :food_id, value: food.id %>
+                    <td>  <%= f.submit 'Add Items' %></td>
+                  <% end %>
+                <% end %>
+                </tr>
+      </tbody>
+      </table>
+  </div>
+</div>
