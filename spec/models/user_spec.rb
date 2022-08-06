@@ -12,8 +12,8 @@ RSpec.describe User, type: :model do
     end
 
     it 'User must have email id.' do
-        @first_user.email = ''
-        expect(@first_user).to_not be_valid
-      end
+      @first_user.email = ''
+      expect(@first_user).to_not be_valid
+    end
   end
 end

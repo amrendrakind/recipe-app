@@ -8,16 +8,14 @@ RSpec.describe Food, type: :model do
     @food.save
   end
   context 'Food validations' do
-
     it 'Food must have price.' do
-        @food.price = ''
-        expect(@food).to_not be_valid
+      @food.price = ''
+      expect(@food).to_not be_valid
     end
 
     it 'price is not string' do
-        @food.price = 5
-        expect(@food).to be_valid
+      @food.price = 5
+      expect(@food).to be_valid
     end
-  
-end
+  end
 end
