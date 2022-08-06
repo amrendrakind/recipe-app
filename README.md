@@ -13,6 +13,9 @@
 - Postgress
 - Capybara/Rspec
 
+## Live Demo (Link for Recipe App)
+
+[Heroku Live Demo Link](https://radiant-temple-57492.herokuapp.com/)
 
 ## Development set up
 
