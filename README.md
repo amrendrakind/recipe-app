@@ -11,27 +11,28 @@
 - Ruby
 - Ruby on Rails
 - Postgress
+- Capybara/Rspec
 
 
 ## Development set up
 
-Use the following steps to run this Project locally:
+Clone Repository using
 
-- Create a directory
+`git clone git@github.com:amrendrakind/recipe-app.git`
 
-- Open the terminal
+Or using HTTPS
 
-- Run this command:
-`git clone git@github.com:Juanse7793/Recipe-app.git`
+`git clone https://github.com/amrendrakind/recipe-app.git`
 
-- Enter in to the folder:
-`cd Recipe-app`
+Move into project directory
 
+`cd recipe-app`
 
 ### Setup Database 
 - Make sure that your Postgres database is installed.
--  Open the file config\database.yml
-- Modify the connection parameters to point your Postgres      Database:
+- Open the file config\database.yml
+- Modify the connection parameters to point your Postgres database:
+
     `username: [your_user]`
     `password: [your_password]`
 
@@ -40,23 +41,24 @@ Use the following steps to run this Project locally:
 - Create db structure including tables : `rake db:migrate`
 - If required seed initial data (stored in db\seeds.rb file): `rails db:seed`
 
-
 ### Run Tests
+
 - Install rspec: `bundle install`
-- Run all tests: `rspec`
+- Run all tests: `rspec spec`
 - Run all tests and show test documentation: `rspec spec --format documentation`
 
 ### Run App
 - If required (Not for testing) run `rails server`
 - Visit http://localhost:3000/ in your browser!
 
-## Authors
+## Author
 
 👤 **Amrendra K**
 
 - GitHub: [@amrendrakind](https://github.com/amrendrakind)
-- Twitter: [@amrendrak_](https://twitter.com/@amrendrak_)
+- Twitter: [@amrendrak_](https://twitter.com/amrendrak_)
 - LinkedIn: [amrendraakumar](https://linkedin.com/in/amrendraakumar)
+
 
 👤 **Isaac Pitwa**
 
@@ -68,7 +70,7 @@ Use the following steps to run this Project locally:
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/amrendrakind/recipe-app/issues).
 
 ## Show your support
 
