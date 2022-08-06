@@ -1,0 +1,53 @@
+
+<div class='container' >
+  <div class='loginForm'>
+      <h1>Recipes Descriptions</h1>
+      <h2><%= @recipe.name %></h2>
+      <div class = 'description-recipe'>
+        <div class = 'recipe-details'>
+          <label>Preparation Time: </label> <%= @recipe.preparation_time %><br>
+          <label>Cooking Time: </label> <%= @recipe.cooking_time %>h<br>
+          <label>Desctiptions: </label> <%= @recipe.description %>
+        </div>
+        <div class='is-public'>
+          <label>Public:<%= check_box_tag 'isPublic', 'no', @recipe.public %><br>
+        </div>
+      </div>
+      
+      <div class='link-details'>
+        <div class = 'button-g-s-l'>
+          <%= link_to "Generate shopping list", user_recipe_shoppings_path(@recipe.user_id, @recipe.id)%>
+        </div>
+        <div class = 'button-a-f-g'>
+          <%= link_to 'Add Food Ingredients', new_user_recipe_recipes_food_path(current_user.id, @recipe.id) %>
+        </div>
+      </div>
+      <br><br>
+    <div class='recipe-table-details'>
+      <table class="foods-table-container">
+        <thead>
+          <tr>
+            <th>Food</th>
+            <th>Quantity</th>
+            <th>Value $</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @recipe_food.each do |rf| %>
+            <tr>
+              <td><%= rf.food.name %></td>
+              <td><%= rf.quantity %></td>
+              <td><%= rf.food.price %></td>
+              <div>
+                  <td><%= link_to 'Modify', user_recipe_path %>
+                      <%= link_to 'Remove', user_recipe_recipes_food_path(current_user.id, @recipe.id, rf.id), method: :delete %>
+                  </td>
+              </div>
+            </tr>
+          <% end %>  
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

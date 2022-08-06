@@ -1,0 +1,26 @@
+<div class='container' >
+  <div class='loginForm'>
+    <h1>Add Food Ingredients</h1><br>
+   <div class="title_columns">
+      <h6>Food</h6>
+      <h6>Measurement <br>
+      Unit</h6>
+      <h6>Unit Price</h6>
+      <h6>Quantity</h6>
+      <h6>Actions</h6>
+  </div>
+
+  <% @foods.each do |food| %>
+    <%= form_with model: @recipe_food, url: user_recipe_recipes_foods_path do |f| %> 
+      <div class="table-rows">
+        <h6><%= food.name %></h6>
+        <h6><%= food.measurement_unit %></h6>
+        <h6><%= food.price %></h6>
+        <h6><%= f.number_field :quantity, class: 'input-quantity' %></h6>
+        <%= f.hidden_field :food_id, value: food.id %>
+        <h6><%= f.submit 'Add', class: 'delete' %></h6>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+</div>

@@ -1,0 +1,195 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginForm {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #2d2d2d;
+  justify-content: center;
+  align-items: center;
+}
+
+.foods-table-container {
+  text-align: center;
+  width: 100%;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 10px;
+}
+
+.food-add-button {
+  width: 100%;
+  text-align: end;
+  margin-bottom: 10px;
+}
+
+.food-add-new-button {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.food-add-new-label {
+  width: 150px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+}
+
+.food-add-new-name-label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.recipes-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.recipe {
+  width: 50%;
+}
+
+.remove-recipe-button {
+  border: 0;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.recipes-list > li {
+  display: flex;
+  padding: 10px 15px;
+  margin: 10px 0;
+  align-items: flex-start;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.desc {
+  width: 70%;
+}
+
+.publics-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+.details {
+  margin: 0;
+  font-size: 15px;
+}
+
+.public-label-details {
+  display: flex;
+  padding: 10px;
+  margin: 10px 0;
+  align-items: flex-start;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 2px;
+  justify-content: space-between;
+}
+
+.shopping-table {
+  text-align: center;
+  width: 70%;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 10px;
+}
+
+.description-recipe {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.recipe-details {
+  width: 60%;
+}
+
+.is-public {
+  display: flex;
+  align-items: flex-start;
+  width: 20%;
+  padding: 20px;
+}
+
+.link-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.button-g-s-l,
+.button-a-f-g {
+  border: 1px solid rgb(172, 172, 175);
+  box-shadow: 3px 5px #888;
+  padding: 10px;
+  border-radius: 2px;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.recipe-table-details {
+  width: 100%;
+}
+
+.add-food-th {
+  text-align: center;
+  width: 100%;
+  border: 1px rgb(0, 0, 0) groove;
+  border-radius: 10px;
+}
+
+.title_columns {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.table-rows {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.input-quantity {
+  width: 50px;
+}
+
+.input-unit-price {
+  width: 50px;
+}
+
+.title_columns h6 {
+  font-weight: 700;
+}

@@ -1,0 +1,33 @@
+
+<div class='container' >
+    <div class='loginForm'>
+        <h1>Foods Lists</h1>
+        <div class='food-add-button'>
+            <%= button_to link_to 'Add Food', new_user_food_path(@user) %>
+        </div>
+        <table class="foods-table-container">
+            <thead>
+                <tr>
+                    <th>Food</th>
+                    <th>Measurement</th>
+                    <th>Price/Unit</th>
+                    <th>Quantity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% @foods.each do |food| %>
+                <tr>
+                    <td><%=food.name %></td>
+                    <td><%=food.measurement_unit%></td>
+                    <td><%=food.price%></td>
+                    <td><%=food.quantity%></td>
+                    <% if can? :destroy, food    %>
+                        <td><%=button_to 'Delete', user_food_path(@user, food), method: :delete, class:'remove-recipe-button'%></td>
+                    <% end %>
+                </tr>
+            <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

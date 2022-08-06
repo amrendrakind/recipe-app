@@ -1,0 +1,19 @@
+<div class='container' >
+     <div class='loginForm'>
+         <h1>Public Recipes</h1>
+        <ul class='publics-list'>
+            <% @publics.each do |public|%>
+                <li class ='public-label-details'>
+                    <div>
+                        <b><%= link_to public.name, user_recipe_path(public.user.id, public.id)%></b><br><br>
+                        By: <%= public.user.name %><br><br>
+                    </div>
+                    <div class = 'details'>
+                        Total Food Items : <%= public.recipe_foods.length %><br><br>
+                        Total Price : $ <%= public.total_price %><br><br>
+                    </div>
+                </li>
+            <%end%>
+        <ul>
+    </div>
+</div>

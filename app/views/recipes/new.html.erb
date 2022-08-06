@@ -1,0 +1,35 @@
+<div class='container' >
+    <div class='loginForm'>
+      <h1>Add New Recipe</h1>
+
+      <%= form_with model: @recipe, url: user_recipes_path do |f| %> 
+        <div>
+        <div class='food-add-new-name-label'>
+              <%= f.label :name, class:'food-add-new-label' %>
+              <%= f.text_field :name, autofocus: true, autocomplete: "name", placeholder: 'Enter Name of Recipe' %> <br><br>
+        </div>
+        <div class='food-add-new-name-label'>
+              <%= f.label :preparation_time, class:'food-add-new-label' %>
+              <%= f.text_field :preparation_time, autofocus: false, autocomplete: "preparation_time", placeholder: 'Enter Preparation Time' %> <br><br>
+        </div>
+        <div class='food-add-new-name-label'>
+              <%= f.label :cooking_time, class:'food-add-new-label' %>
+              <%= f.text_field :cooking_time, autofocus: false, autocomplete: "cooking_time", placeholder: 'Enter Cooking Time' %><br><br>
+        </div>
+        <div class='food-add-new-name-label'>
+              <%= f.label :description, class:'food-add-new-label' %>
+              <%= f.text_area :description, autofocus: false, autocomplete: "description", placeholder: 'Enter Recipe Description' %><br><br>
+        </div>
+              <%= f.label :public, class:'food-add-new-label' %>
+              <%= f.check_box :public %> <br>
+          <div class='food-add-new-button'>
+                <%= f.submit 'Add Recipe' %>
+          </div>
+        </div>
+        <br>
+        <div class='food-add-new-button'>
+            <%= button_to link_to "Back to Recipe", user_recipes_path %>
+        <div>
+      <% end %> 
+  </div>
+</div>

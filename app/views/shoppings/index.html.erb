@@ -1,0 +1,29 @@
+<div class='container' >
+    <div class='loginForm'>
+        <h1>Shopping Lists</h1>
+        <% @total_value = 0 %>
+      <table class='shopping-table' >
+              <thead>
+                <tr>
+                  <th>Food</th>
+                  <th>Quantity</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <% @recipe_food.each do |shopping| %>
+                  <tr>
+                    <td><%= shopping.food.name %></td>
+                    <td><%= shopping.quantity %> <%=shopping.food.measurement_unit%></td>
+                    <td>$<%= shopping.food.price * shopping.quantity%></td>
+                    <% @total_value += shopping.food.price %>
+                  </tr>
+                <% end %> 
+              </tbody>
+        </table>
+        <br>
+        <b><label>Number of food items to buy : </label><%= @recipe_food.count%></b><br>
+        <b><label>Total value of food needed:</label>$<%=@total_value%></b>
+      </div>
+    </div>
+</div>

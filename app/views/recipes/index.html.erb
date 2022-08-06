@@ -1,0 +1,25 @@
+
+<div class='container' >
+  <div class='loginForm'>
+      <h1>Recipes Lists</h1>
+      <div class='food-add-button'>
+        <%= button_to link_to 'Add Recipe', new_user_recipe_path %>
+      </div>
+
+      <ul class="recipes-list">
+        <% @recipes.each do |recipe| %>
+          <li>
+              <div class="label">
+                  <b><%= link_to recipe.name , user_recipe_path(@user, recipe) %></b>
+                  <% if can? :destroy, recipe  %>
+                    <%= button_to 'Remove', user_recipe_path(@user, recipe), method: :delete, class: 'remove-recipe-button'%>
+                  <% end %>
+              </div>
+              <div class="desc">
+                  <p><%= recipe.description %></p>
+              </div>
+          </li>
+        <% end %>
+      </ul>
+  </div>
+</div>
