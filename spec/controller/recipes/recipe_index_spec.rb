@@ -3,7 +3,8 @@ require 'rails_helper'
 RSpec.describe 'Recipe', type: :feature do
   before :each do
     @user = User.create(name: 'amar', email: 'amar@gmail.com', password: '123456')
-    @recipe = Recipe.create(name: 'Recipe1', preparation_time: 10.5, cooking_time: 20.5, description: 'Description1', public: true, user: @user)
+    @recipe = Recipe.create(name: 'Recipe1', preparation_time: 10.5, cooking_time: 20.5, description: 'Description1',
+                            public: true, user: @user)
     @recipe.save
     visit root_path
     visit new_user_session_path
