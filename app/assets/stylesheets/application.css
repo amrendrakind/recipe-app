@@ -167,3 +167,29 @@
   border: 1px rgb(0, 0, 0) groove;
   border-radius: 10px;
 }
+
+.title_columns {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.table-rows {
+  width: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.input-quantity {
+  width: 50px;
+}
+
+.input-unit-price {
+  width: 50px;
+}
+
+.title_columns h6{
+  font-weight: 700;
+}

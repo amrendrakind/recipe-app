@@ -40,9 +40,9 @@
               <td><%= rf.quantity %></td>
               <td><%= rf.food.price %></td>
               <div>
-                <td><%= link_to 'Modify', user_recipe_path %>
-                    <%= link_to 'Remove', user_recipe_recipes_food_path(current_user.id, @recipe.id, rf.id), method: :delete %>
-                </td>
+                  <td><%= link_to 'Modify', user_recipe_path %>
+                      <%= link_to 'Remove', user_recipe_recipes_food_path(current_user.id, @recipe.id, rf.id), method: :delete %>
+                  </td>
               </div>
             </tr>
           <% end %>  
